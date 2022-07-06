@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte</h2>
+    <p>
+        <pre>
+            <code>
+public class Pessoa {
+    private String nome;
+    private int idade;
+    public Pessoa() {
+        System.out.println("Criando objeto!");
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String n) {
+        nome = n;
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int i) {
+        idade = i;
+    }
+}
+<br>
+import java.util.Scanner;
+public class GetNSetPessoa {
+    public static void main(String[] args) {
+        Pessoa p1 = new Pessoa();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Insira seu nome: ");
+        String nome = sc.nextLine();
+        p1.setNome(nome);
+        System.out.println("Insira sua idade: ");
+        int idade = sc.nextInt();
+        p1.setIdade(idade);
+        System.out.println("\nNovo cadastro:\n" + p1.getNome() + "\n" + p1.getIdade() + " anos");
+    }
+}
+            </code>
+        </pre>
+    </p>
+    <pre>
+        <code>
+#include <stdio.h>
+void main() {
+    float x;
+    float y;
+    int op;
+    printf("= CALCULADORA DO POLVO =");
+    printf("\n\nDigite o primeiro numero: ");
+    scanf("%f", &x);
+    printf("\nDigite o segundo numero: ");
+    scanf("%f", &y);
+    printf("\nEscolha a operação que quer efetuar: ");
+    printf("\n[1] SOMA\n[2] SUBTRAÇÃO\n[3] MULTIPLICACAO\n[4] DIVISAO\n[5] POTENCIACAO\n[6] RADICIACAO\n");
+    scanf("%d", &op);
+    if(op == 1) {
+        printf("\nRESULTADO:\n %.2f+%.2f = %.2f", x, y, x + y);
+    }
+    else if(op == 2) {
+        printf("\nRESULTADO:\n %.2f-%.2f = %.2f", x, y, x - y);
+    }
+    else if(op == 3) {
+        printf("\nRESULTADO:\n %.2fx%.2f = %.2f", x, y, x * y);
+    }
+    else if(op == 4) {
+        printf("\nRESULTADO:\n %.2f/%.2f = %.2f", x, y, x / y);
+    }
+    else if(op == 5){
+        float res = pow(x, y);
+        printf("\nRESULTADO:\n%.2f", res);
+    }
+    else if(op == 6){
+        float res = pow(x, (1 / y));
+        printf("\nRESULTADO:\n%.2f", res);
+    }
+    else{
+        printf("\nNumero invalido!");
+    }
+}
+        </code>
+    </pre>
+    <h2>Citações</h2>
+    <p>
+        Como diria meu pai: <q>Aulas!</q>
+    </p>
+    <p>
+        John Textor fala sobre Fábregas:
+    </p>
+    <blockquote cite="https://www.fogaonet.com/noticias-do-botafogo/john-textor-elogia-fabregas-mas-confirma-que-botafogo-nao-demonstrou-interesse-nao-e-o-que-buscamos-agora/">
+        – É complicado dizer que ele foi oferecido e rejeitado. O Google Tradutor não foi muito preciso, então não sei se entendi muito bem. Eu sei que ele está disponível, claro que é um jogador lendário. Você deve a si mesmo dar uma olhada, mas temos um movimento mais jovem acontecendo aqui no Botafogo, ainda mais nessa posição. Eu não sei se ele tem o perfil que buscamos aqui. Talvez ele vá para outro lugar, jogue muito bem e vamos nos arrepender, mas não é o que estamos buscando agora – afirmou o bilionário ao “Lance!”, na zona mista do Estádio Nilton Santos após a derrota do Botafogo para o Fluminense.
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>
+        Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>!
+    </p>
+    <h2>Texto invertido</h2>
+    <p>
+        <bdo dir="rtl">Estou aprendendo HTML e CSS!</bdo>
+    </p>
+</body>
+</html>
